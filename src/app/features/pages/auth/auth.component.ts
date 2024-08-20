@@ -68,7 +68,7 @@ export class AuthComponent implements OnInit {
   }
 
   toggleForm(): void {
-    const targetRoute = this.isRegistering ? '/login' : '/register';
+    const targetRoute = this.isRegistering ? '/auth/login' : '/auth/register';
     this.router.navigate([targetRoute]);
   }
 
