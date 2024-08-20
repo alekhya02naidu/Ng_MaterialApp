@@ -1,0 +1,29 @@
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  position: relative;
+
+  app-sidebar {
+    width: 20%;
+  }
+
+  app-navbar {
+    width: 80%;
+  }
+
+  .content {
+    // display: flex;
+    // flex-grow: 1;
+    position: absolute;
+    width: 75.9%;
+    top: 4rem;
+    left: 18.4rem;
+    background-color: rgb(242 248 249);
+    padding: 30px;
+  }
+
+  .sidebar-closed {
+    width: 100%;
+  }
+}

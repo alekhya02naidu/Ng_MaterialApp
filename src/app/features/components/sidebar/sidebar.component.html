@@ -1,0 +1,44 @@
+<!-- <aside class="sidebar" [ngClass]="{'closed': !isOpen}"> -->
+    <mat-sidenav #sidenav [ngClass]="{'closed': !isOpen}" class="sidenav" mode="side" [opened]="true">
+        <!-- logo -->
+        <mat-toolbar class="sidenav-toolbar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo" />
+                <span class="logo-name">Admira</span>
+            </div>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon class="material-icons-outlined">expand_circle_down</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <!-- profile card -->
+        <mat-card class="profile-card">
+            <mat-card-content>
+                <img mat-card-avatar src="assets/images/profile.png" alt="Profile Image">
+                <mat-card-title>admin</mat-card-title>
+                <mat-card-subtitle>admin&#64;163.com</mat-card-subtitle>
+                <mat-card-actions>
+                    <button mat-icon-button><mat-icon class="material-icons-outlined">account_circle</mat-icon></button>
+                    <button mat-icon-button><mat-icon class="material-icons-outlined">edit</mat-icon></button>
+                    <button mat-icon-button><mat-icon class="material-icons-outlined">task_alt</mat-icon></button>
+                    <button mat-icon-button (click)="logout()"><mat-icon
+                            class="material-icons-outlined">exit_to_app</mat-icon></button>
+                </mat-card-actions>
+            </mat-card-content>
+        </mat-card>
+
+        <!-- dashboard section-->
+        <mat-nav-list>
+            <span class="title">DASHBOARDS</span>
+            <app-nav-item [item]="dashboardItem"></app-nav-item>
+        </mat-nav-list>
+
+        <!-- app section-->
+        <mat-nav-list>
+            <span class="title">APP</span>
+            <ng-container *ngFor="let item of navItems">
+                <app-nav-item [item]="item"></app-nav-item>
+            </ng-container>
+        </mat-nav-list>
+    </mat-sidenav>
+<!-- </aside> -->

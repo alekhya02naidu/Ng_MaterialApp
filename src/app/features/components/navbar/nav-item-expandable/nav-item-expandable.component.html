@@ -1,0 +1,8 @@
+<mat-list-item (click)="toggleOptions()">
+    <img [src]="icon" alt="icon" />
+    <span>{{ label }}</span>
+    <mat-icon [ngClass]="{'display-options': isOptionsVisible}" class="expand-more">expand_more</mat-icon>
+</mat-list-item>
+<div *ngIf="isOptionsVisible" class="inner-options">
+    <ng-content></ng-content>
+</div>

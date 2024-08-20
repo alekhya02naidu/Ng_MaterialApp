@@ -1,0 +1,52 @@
+<mat-toolbar class="navbar">
+    <!-- Left Side: Hamburger Menu -->
+    <mat-toolbar-row matPrefix class="menu">
+        <mat-icon (click)="toggleSidenav()">menu</mat-icon>
+
+    </mat-toolbar-row>
+
+    <!-- Right Side: Icons and Dropdowns -->
+    <mat-toolbar-row matSuffix class="nav-options">
+        <mat-icon (click)="toggleFullscreen()">fullscreen</mat-icon>
+
+        <!-- cultures -->
+        <button class="culture" mat-button [matMenuTriggerFor]="menu">
+            <img [src]="'assets/icons/flags/' + selectedLanguage.country+ '.svg'"
+                alt="{{ selectedLanguage.name }} flag icon" width="30">
+        </button>
+        <mat-menu #menu="matMenu" class="user-menu">
+            <button mat-menu-item *ngFor="let language of languages" (click)="updateCulture(language)">
+                <img [src]="'assets/icons/flags/' + language.country + '.svg'" alt="{{ language.name }} Flag"
+                    width="30">
+                {{ language.name }}
+            </button>
+        </mat-menu>
+
+        <mat-icon class="material-icons-outlined">notifications_outline</mat-icon>
+        <mat-icon class="material-icons-outlined">bookmark_outline</mat-icon>
+
+        <!-- profile -->
+        <button mat-button [matMenuTriggerFor]="profileMenu" class="profile-btn">
+            <img src="assets/images/profile.png" alt="Profile Image">
+            <span>admin</span>
+        </button>
+        <mat-menu #profileMenu="matMenu" class="profile-menu">
+            <button mat-menu-item (click)="goToProfile()">
+                <mat-icon>account_circle</mat-icon>
+                Profile
+            </button>
+            <button mat-menu-item (click)="editProfile()">
+                <mat-icon>edit</mat-icon>
+                Edit Profile
+            </button>
+            <button mat-menu-item (click)="restoreDefault()">
+                <mat-icon>restore</mat-icon>
+                Restore Default
+            </button>
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>exit_to_app</mat-icon>
+                Logout
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
