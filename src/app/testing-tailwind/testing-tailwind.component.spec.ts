@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthComponent } from './auth.component';
+import { TestingTailwindComponent } from './testing-tailwind.component';
 
-describe('AuthComponent', () => {
-  let component: AuthComponent;
-  let fixture: ComponentFixture<AuthComponent>;
+describe('TestingTailwindComponent', () => {
+  let component: TestingTailwindComponent;
+  let fixture: ComponentFixture<TestingTailwindComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AuthComponent]
+      imports: [TestingTailwindComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AuthComponent);
+    fixture = TestBed.createComponent(TestingTailwindComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
