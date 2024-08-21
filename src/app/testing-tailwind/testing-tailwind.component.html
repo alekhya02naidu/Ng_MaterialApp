@@ -1,1 +1,34 @@
 <p>testing-tailwind works!</p>
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+
+<div class="p-4 bg-blue-500 text-white md:bg-green-500">
+    Responsive Box
+    <div class="p-4 bg-red-500 text-white md:bg-ornage-500">
+        <span>checking</span>
+    </div>
+</div>
+
+<div class="my-custom-class">
+    Mixed Tailwind and SCSS
+</div>
+
+<div class="my-custom-component p-4">
+    <h2 class="text-lg font-semibold">Existing Component</h2>
+    <p>This component has mixed Tailwind and SCSS styles.</p>
+</div>
+
+<div class="flex flex-col md:flex-row bg-gray-100 p-4 rounded-lg shadow-lg">
+    <!-- Sidebar -->
+    <div class="flex-1 p-4 bg-white rounded-lg md:mr-4 mb-4 md:mb-0">
+        <h2 class="text-lg font-semibold mb-2">Sidebar</h2>
+        <p class="text-gray-700">This is the sidebar content.</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-2 p-4 bg-white rounded-lg">
+        <h2 class="text-lg font-semibold mb-2">Main Content</h2>
+        <p class="text-gray-700">This is the main content area.</p>
+    </div>
+</div>
