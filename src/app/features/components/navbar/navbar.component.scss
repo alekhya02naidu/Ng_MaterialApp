@@ -1,0 +1,71 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-grow: 8;
+
+        mat-icon {
+            padding: .5rem;
+        }
+
+        mat-icon:hover {
+            background-color: rgba(201, 211, 219, 0.433);
+            border-radius: 50%;
+        }
+
+    }
+
+    .nav-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-shrink: 3;
+        gap: .2rem;
+
+        mat-icon {
+            padding: .5rem;
+        }
+
+        mat-icon:hover {
+            background-color: rgba(201, 211, 219, 0.433);
+            border-radius: 50%;
+        }
+
+        .culture {
+            border: none;
+            outline: none;
+            background-color: rgb(255, 255, 255);
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .profile-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                padding: 0 10px;
+            }
+        }
+
+        ::ng-deep .mdc-button__label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

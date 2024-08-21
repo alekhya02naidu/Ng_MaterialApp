@@ -1,0 +1,16 @@
+<mat-card class="revenue-card">
+    <mat-card-header>
+        <mat-card-title>{{ heading }}</mat-card-title>
+        <button mat-button class="badge-button">{{ badgeTitle }}</button>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="amount">
+            <span>{{ amount }}</span>
+        </div>
+        <div class="progress-container">
+            <label>Total Revenue</label>
+            <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        </div>
+    </mat-card-content>
+</mat-card>

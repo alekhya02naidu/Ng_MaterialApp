@@ -1,0 +1,13 @@
+<mat-list-item (click)="toggleSubmenu()">
+    <div class="navitem" >
+        <img [src]="item.icon" alt="icon of {{ item.name }}" />
+        <span>{{ item.name }}</span>
+    </div>
+    <mat-icon *ngIf="item.hasSubmenu" class="expand-more">expand_more</mat-icon>
+    <span *ngIf="item.badge" class="badge" matBadge="{{ item.badge }}" matBadgeOverlap="false"></span>
+</mat-list-item>
+<div *ngIf="isSubmenuVisible" class="submenu-options">
+    <mat-list-item *ngFor="let submenu of item.submenu" (click)="onSubmenuClick(submenu)">
+        <span>{{ submenu }}</span>
+    </mat-list-item>
+</div>

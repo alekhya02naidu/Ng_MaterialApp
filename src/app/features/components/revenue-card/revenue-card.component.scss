@@ -1,0 +1,35 @@
+.revenue-card {
+    margin: 8px;
+    width: 16rem; 
+
+    .mat-mdc-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .mat-mdc-card-title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .amount {
+        margin: 16px 0;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+    }
+
+    .progress-container {
+        margin-top: 16px;
+
+        .mat-progress-bar {
+            height: 10px;
+            border-radius: 5px;
+        }
+    }
+
+}
