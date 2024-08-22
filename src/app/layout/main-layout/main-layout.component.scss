@@ -8,19 +8,17 @@
     width: 20%;
   }
 
-  app-navbar {
-    width: 80%;
+  .hide {
+    display: none;
   }
 
   .content {
-    // display: flex;
-    // flex-grow: 1;
-    position: absolute;
-    width: 75.9%;
-    top: 4rem;
-    left: 18.4rem;
+    width: 80%;
     background-color: rgb(242 248 249);
-    padding: 30px;
+
+    .navigated-content {
+      padding: 1rem;
+    }
   }
 
   .sidebar-closed {

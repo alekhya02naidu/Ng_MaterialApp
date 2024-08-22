@@ -1,9 +1,11 @@
 <div class="main-layout">
-    <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
-    <app-navbar (toggleSidebar)="onToggleSidebar()"></app-navbar>
+    <app-sidebar [ngClass]="{'hide': !isSidebarOpen}" [isOpen]="isSidebarOpen"></app-sidebar>
 
     <!-- route the main content -->
     <div class="content" [ngClass]="{'sidebar-closed': !isSidebarOpen}">
-        <router-outlet></router-outlet>
+        <app-navbar (toggleSidebar)="onToggleSidebar()"></app-navbar>
+        <div class="navigated-content">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
