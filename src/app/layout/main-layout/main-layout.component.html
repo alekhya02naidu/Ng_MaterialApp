@@ -1,10 +1,10 @@
-<div class="main-layout">
-    <app-sidebar [ngClass]="{'hide': !isSidebarOpen}" [isOpen]="isSidebarOpen"></app-sidebar>
+<div class="flex h-screen">
+    <app-sidebar class="w-1/5" [ngClass]="{'hide': !isSidebarOpen}" [isOpen]="isSidebarOpen"></app-sidebar>
 
     <!-- route the main content -->
-    <div class="content" [ngClass]="{'sidebar-closed': !isSidebarOpen}">
+    <div class="w-4/5 bg-[#f3f7f8]" [ngClass]="{'sidebar-closed': !isSidebarOpen}">
         <app-navbar (toggleSidebar)="onToggleSidebar()"></app-navbar>
-        <div class="navigated-content">
+        <div class="px-4">
             <router-outlet></router-outlet>
         </div>
     </div>
