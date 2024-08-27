@@ -1,27 +1,7 @@
-.main-layout {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  position: relative;
+.hide {
+  @apply hidden;
+}
 
-  app-sidebar {
-    width: 20%;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .content {
-    width: 80%;
-    background-color: rgb(242 248 249);
-
-    .navigated-content {
-      padding: 1rem;
-    }
-  }
-
-  .sidebar-closed {
-    width: 100%;
-  }
+.sidebar-closed {
+  @apply w-full;
 }
