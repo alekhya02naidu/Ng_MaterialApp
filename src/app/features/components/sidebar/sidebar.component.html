@@ -1,29 +1,42 @@
-<aside class="sidebar" [ngClass]="{'closed': !isOpen}">
-    <mat-sidenav #sidenav class="sidenav" mode="side" [opened]="true">
+<aside class="w-full" [ngClass]="{'w-4': !isOpen}">
+    <mat-sidenav #sidenav mode="side" [opened]="true">
         <!-- logo -->
-        <mat-toolbar class="sidenav-toolbar">
-            <div class="logo">
+        <mat-toolbar class="flex justify-between">
+            <div class="flex items-center px-8 gap-3">
                 <img src="assets/images/logo.png" alt="Logo" />
-                <span class="logo-name">Admira</span>
+                <span class="text-sm font-medium">Admira</span>
             </div>
             <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon class="material-icons-outlined">expand_circle_down</mat-icon>
+                <mat-icon class="material-icons-outlined transform rotate-90 text-blue-600">
+                    expand_circle_down
+                </mat-icon>
             </button>
         </mat-toolbar>
 
         <!-- profile card -->
-        <mat-card class="profile-card">
+        <mat-card class="rounded-sm">
             <mat-card-content>
-                <img mat-card-avatar src="assets/images/profile.png" alt="Profile Image">
-                <mat-card-title>admin</mat-card-title>
-                <mat-card-subtitle>admin&#64;163.com</mat-card-subtitle>
-                <mat-card-actions>
-                    <button mat-icon-button><mat-icon class="material-icons-outlined">account_circle</mat-icon></button>
-                    <button mat-icon-button><mat-icon class="material-icons-outlined">edit</mat-icon></button>
-                    <button mat-icon-button><mat-icon class="material-icons-outlined">task_alt</mat-icon></button>
-                    <button mat-icon-button (click)="logout()"><mat-icon
-                            class="material-icons-outlined">exit_to_app</mat-icon></button>
-                </mat-card-actions>
+                <div class="flex flex-col items-center w-11/12">
+                    <img class="mat-card-avatar w-16 h-16 rounded-lg border-4 border-gray-300 shadow-lg"
+                        src="assets/images/profile.png" alt="Profile Image">
+                    <mat-card-title class="custom-card-title">admin</mat-card-title>
+                    <mat-card-subtitle class="custom-subtitle">
+                        admin&#64;example.com
+                    </mat-card-subtitle>
+                    <mat-card-actions class="flex justify-between w-4/5 mt-4">
+                        <button mat-icon-button>
+                            <mat-icon class="material-icons-outlined">account_circle</mat-icon>
+                        </button>
+                        <button mat-icon-button>
+                            <mat-icon class="material-icons-outlined">edit</mat-icon>
+                        </button>
+                        <button mat-icon-button>
+                            <mat-icon class="material-icons-outlined">task_alt</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="logout()"><mat-icon
+                                class="material-icons-outlined">exit_to_app</mat-icon></button>
+                    </mat-card-actions>
+                </div>
             </mat-card-content>
         </mat-card>
 

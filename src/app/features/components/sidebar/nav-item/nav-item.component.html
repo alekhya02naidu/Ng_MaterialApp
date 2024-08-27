@@ -1,13 +1,17 @@
-<mat-list-item (click)="toggleSubmenu()">
-    <div class="navitem" >
-        <img [src]="item.icon" alt="icon of {{ item.name }}" />
-        <span>{{ item.name }}</span>
+<mat-list-item (click)="toggleSubmenu()" class="custom-mat-list-item">
+    <div class="flex flex-row justify-between">
+        <div class="flex gap-2 pl-3">
+            <img [src]="item.icon" alt="icon of {{ item.name }}" />
+            <span>{{ item.name }}</span>
+        </div>
+        <mat-icon *ngIf="item.hasSubmenu" [ngClass]="{'-rotate-90': !isSubmenuVisible, 'rotate-0': isSubmenuVisible}"
+            class="transition-transform duration-300">expand_more</mat-icon>
+        <span *ngIf="item.badge" class="bg-blue-500 text-white rounded-full px-3 py-1">{{ item.badge }}</span>
     </div>
-    <mat-icon *ngIf="item.hasSubmenu" class="expand-more">expand_more</mat-icon>
-    <span *ngIf="item.badge" class="badge" matBadge="{{ item.badge }}" matBadgeOverlap="false"></span>
 </mat-list-item>
-<div *ngIf="isSubmenuVisible" class="submenu-options">
+
+<div *ngIf="isSubmenuVisible" class="bg-blue-50">
     <mat-list-item *ngFor="let submenu of item.submenu" (click)="onSubmenuClick(submenu)">
-        <span>{{ submenu }}</span>
+        <span class="pl-8">{{ submenu }}</span>
     </mat-list-item>
 </div>
