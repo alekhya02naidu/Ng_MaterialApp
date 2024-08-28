@@ -1,33 +1,13 @@
-<div class="dashboard1">
+<div class="flex flex-col">
 
     <!-- revenue cards -->
-    <div class="card-container">
-        <app-revenue-card 
-          heading="Investements" 
-          badgeTitle="Monthly"
-          amount="$47,000"
-          [progress]="55">
-        </app-revenue-card>
-      
-        <app-revenue-card 
-          heading="Sales" 
-          badgeTitle="Annual"
-          amount="$22784"
-          [progress]="42">
-        </app-revenue-card>
-      
-        <app-revenue-card 
-          heading="Cost" 
-          badgeTitle="Today"
-          amount="$1587"
-          [progress]="75">
-        </app-revenue-card>
-      
-        <app-revenue-card 
-          heading="Profit" 
-          badgeTitle="Weekly"
-          amount="$1400"
-          [progress]="48">
+    <div class="flex flex-wrap justify-between w-full -m-2s">
+        <app-revenue-card class="revenue-cards"
+            *ngFor="let card of revenueCards; let i = index"
+            [heading]="card.heading"
+            [badgeTitle]="card.badgeTitle"
+            [amount]="card.amount"
+            [progress]="card.progress">
         </app-revenue-card>
       </div>
       

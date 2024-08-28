@@ -1,4 +1,4 @@
-<mat-toolbar class="flex !flex-row items-center justify-between w-full shadow-md">
+<mat-toolbar class="flex !flex-row items-center justify-between w-screen shadow-md">
     <!-- Left Side: Hamburger Menu -->
     <mat-toolbar-row matPrefix class="flex items-center flex-grow-8">
         <button mat-icon-button>
@@ -8,7 +8,7 @@
 
     <!-- Right Side: Icons and Dropdowns -->
     <mat-toolbar-row matSuffix class="flex items-center justify-end gap-2 flex-shrink">
-        <button mat-icon-button>
+        <button class="mat-icon-button hidden md:inline">
             <mat-icon (click)="toggleFullscreen()">fullscreen</mat-icon>
         </button>
 
@@ -27,10 +27,10 @@
             </button>
         </mat-menu>
 
-        <button mat-icon-button>
+        <button class="mat-icon-button hidden md:inline">
             <mat-icon class="material-icons-outlined">notifications_outline</mat-icon>
         </button>
-        <button mat-icon-button>
+        <button class="mat-icon-button hidden md:inline">
             <mat-icon class="material-icons-outlined">bookmark_outline</mat-icon>
         </button>
 

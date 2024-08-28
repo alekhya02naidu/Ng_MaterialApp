@@ -1,4 +1,4 @@
-<aside class="w-full" [ngClass]="{'w-4': !isOpen}">
+<aside class="w-full hidden md:inline" [ngClass]="{'w-4': !isOpen}">
     <mat-sidenav #sidenav mode="side" [opened]="true">
         <!-- logo -->
         <mat-toolbar class="flex justify-between">
@@ -7,9 +7,16 @@
                 <span class="text-sm font-medium">Admira</span>
             </div>
             <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon class="material-icons-outlined transform rotate-90 text-blue-600">
-                    expand_circle_down
-                </mat-icon>
+                <div class="hidden md:inline">
+                    <mat-icon class="material-icons-outlined transform rotate-90 text-blue-600 ">
+                        expand_circle_down
+                    </mat-icon>
+                </div>
+
+                <!-- for smaaller screens -->
+                <div class="inline md:hidden">
+                    <mat-icon>close</mat-icon>
+                </div>
             </button>
         </mat-toolbar>
 
